@@ -4,11 +4,14 @@ import random
 # paper -> "pr" 
 # scissors -> "sc" ''') 
 def game():
-  print('''**Enter any one out of the 3
+  print('''*****
+Enter any one out of the 3
 stone -> "st" 
 paper -> "pr" 
-scissors -> "sc"** ''') 
+scissors -> "sc"
+***** ''') 
   u=input("Enter your choice :")
+  print()
   comp=random.randint(1,3)
  #comp=2
   ref={"st":1,"pr":2,"sc":3}
@@ -40,6 +43,7 @@ while(r=="y"):
   t=int(input("Enter the number of turns for each round (3 or 5 or 10) :"))
   for i in range (1,t+1):
     f=game()
+    print("***")
     if(f==1):
       us+=1
     elif(f==0):
@@ -48,7 +52,8 @@ while(r=="y"):
       us+=0
       cs+=0
   
-  print("Scores")
+  print()
+  print("****Scores*****")
   if(us>cs):
     print(f"user is the winner with score {us}/{t}")
   elif(cs>us):
@@ -60,5 +65,6 @@ while(r=="y"):
   r=input('''Would you like to play another round ?
   if yes type "y" , if no the type "n" :''')
 print("game ended")
+print("**********")
     
   
